@@ -1,11 +1,11 @@
 <section id="research" class="page">
   <h2>Publications</h2>
   <div class="pub-list">
-    {%- capture me_bold %}<strong>{{ site.author_short }}</strong>{% endcapture -%}
+    {%- capture me_bold %}<strong>{{ site.data.content.author_short }}</strong>{% endcapture -%}
     {%- for pub in site.data.publications %}
     <div class="pub">
       <div class="pub-title">{{ pub.title }}</div>
-      <div class="pub-authors">{{ pub.authors | replace: site.author_short, me_bold }}</div>
+      <div class="pub-authors">{{ pub.authors | replace: site.data.content.author_short, me_bold }}</div>
       <div class="pub-venue"><em>{{ pub.journal }}</em>{% if pub.volume %} <strong>{{ pub.volume }}</strong>{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %} ({{ pub.year }}){% if pub.doi %} &middot; <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI: {{ pub.doi }}</a>{% endif %}</div>
       {%- if pub.tags %}
       <div class="pub-tags">

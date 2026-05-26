@@ -15,19 +15,24 @@ Almost everything is data-driven — you rarely need to touch HTML.
 
 | To change… | Edit |
 |---|---|
-| Name, bio, affiliation, social links, contact details | `_config.yml` |
+| Name, bio, affiliation, social links, nav, contact details | `_data/content.yml` |
 | Publication list | `_data/publications.yml` |
 | CV (positions, education, awards, methods, tools) | `_data/cv.yml` |
 | Code / tools cards | `_data/projects.yml` |
 | Theme colour | `--accent` in `assets/css/style.css` |
 | Profile photo | replace `assets/img/photo.jpg` |
-| CV PDF | replace `assets/files/CV_A_Agrawal.pdf` |
+| CV PDF | replace `assets/files/resume.pdf` |
+
+Everything you edit lives in `_data/`. `jekyll serve` watches that folder and
+rebuilds on save, so changes show up on refresh. `_config.yml` holds only build
+settings and is read once at startup — the rare times you edit it, restart the
+server.
 
 **Add a publication** — copy a block in `_data/publications.yml`:
 
 ```yaml
 - title: Your paper title
-  authors: A. Agrawal, Co Author
+  authors: Your Name, Co Author(s)
   journal: Journal Name
   volume: "12"
   pages: 100–110      # optional
@@ -36,13 +41,13 @@ Almost everything is data-driven — you rarely need to touch HTML.
   tags: [Topic one, Topic two]   # optional
 ```
 
-Your own name (`author_short` in `_config.yml`) is bolded automatically in author lists.
+Your own name (`author_short` in `_data/content.yml`) is bolded automatically in author lists.
 
 ## Repository layout
 
 ```
 .
-├── _config.yml          # site-wide settings and all hero/contact content
+├── _config.yml          # build settings only (read once at startup)
 ├── index.html           # assembles the page from section includes
 ├── _layouts/
 │   └── default.html      # HTML skeleton (head, nav, footer)
@@ -56,7 +61,8 @@ Your own name (`author_short` in `_config.yml`) is bolded automatically in autho
 │   ├── contact.html      # contact block
 │   ├── footer.html
 │   └── icons/            # one SVG per icon (cv, email, scholar, orcid, …)
-├── _data/                # the content you edit most
+├── _data/                # all the content you edit (hot-reloads on save)
+│   ├── content.yml       # name, bio, nav, social links, contact
 │   ├── publications.yml
 │   ├── cv.yml
 │   └── projects.yml
@@ -64,17 +70,17 @@ Your own name (`author_short` in `_config.yml`) is bolded automatically in autho
     ├── css/style.css     # the shared stylesheet (theme colour lives here)
     ├── js/theme.js       # light/dark toggle
     ├── img/photo.jpg
-    └── files/CV_A_Agrawal.pdf
+    └── files/resume.pdf
 ```
 
 ## Local preview (optional)
 
-GitHub Pages rebuilds the site automatically on every push, so a local install
-is only needed if you want to preview before pushing.
+GitHub Pages rebuilds the site automatically on every push, so a local install is only needed if you want to preview before pushing.
 
 ```bash
-bundle install
-bundle exec jekyll serve
+gem install --user-install jekyll
+export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+jekyll serve
 # open http://localhost:4000
 ```
 

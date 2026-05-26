@@ -1,8 +1,8 @@
 <nav>
   <div class="inner">
-    <a href="#about" class="logo">{{ site.hero.initials | default: site.title }}</a>
+    <a href="#about" class="logo">{{ site.data.content.hero.initials | default: site.data.content.title }}</a>
     <ul>
-      {%- for item in site.nav %}
+      {%- for item in site.data.content.nav %}
       <li><a href="{{ item.href }}">{{ item.label }}</a></li>
       {%- endfor %}
     </ul>

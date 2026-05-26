@@ -5,17 +5,17 @@
 left:
   - heading: Positions
     entries:
-      - year: 2023 – Present
+      - year: 2023 - Present
         role: Postdoctoral Researcher
         institution: Institute for Computational Physics, University of Stuttgart
 
   - heading: Education
     entries:
-      - year: 2018 – 2022
+      - year: 2018 - 2022
         role: PhD in Mechanical Engineering
         institution: Queen Mary University of London
         detail: "Thesis: Liquid exfoliation and rheology of 2D nanomaterials · advisor: Lorenzo Botto"
-      - year: 2013 – 2017
+      - year: 2013 - 2017
         role: B.Tech. in Engineering Physics
         institution: Indian Institute of Technology Delhi
         detail: "Thesis: Collective motion of self-propelled rods in quasi-2D geometry · advisor: Sujin Babu"

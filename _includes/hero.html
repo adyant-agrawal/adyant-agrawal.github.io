@@ -1,19 +1,20 @@
 <section id="about" class="page">
+  {%- assign hero = site.data.content.hero %}
   <div class="hero-text">
-    <h3>{{ site.hero.role }}</h3>
-    <h1>{{ site.hero.name }}</h1>
-    <p class="title">{{ site.hero.affiliation }}</p>
-    <p>{{ site.hero.bio | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
-    <p class="subtle">{{ site.hero.bio_secondary }}</p>
+    <h3>{{ hero.role }}</h3>
+    <h1>{{ hero.name }}</h1>
+    <p class="title">{{ hero.affiliation }}</p>
+    <p>{{ hero.bio | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+    <p class="subtle">{{ hero.bio_secondary }}</p>
   </div>
   <aside class="hero-side">
     <div class="avatar">
-      <span class="fallback">{{ site.hero.initials }}</span>
-      <img src="{{ site.hero.photo | relative_url }}" alt="{{ site.hero.name }}"
+      <span class="fallback">{{ hero.initials }}</span>
+      <img src="{{ hero.photo | relative_url }}" alt="{{ hero.name }}"
            onerror="this.style.display='none'; this.previousElementSibling.style.zIndex='1';">
     </div>
     <div class="icon-links">
-      {%- for link in site.social %}
+      {%- for link in site.data.content.social %}
       <a href="{% if link.url contains '://' or link.url contains 'mailto' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
          class="icon-btn"
          {% if link.download %}download{% endif %}

@@ -1,66 +1,14 @@
 # ---------------------------------------------------------------------------
-#  Site configuration
-#  Edit the values below to change the content of the whole site.
-#  Publications, CV entries, and projects live in the _data/ folder.
+#  Build settings only. These are read once at startup, so changing this file
+#  requires restarting `jekyll serve`.
+#
+#  All editable content (bio, links, nav, contact, publications, CV, projects)
+#  lives in the _data/ folder, which Jekyll hot-reloads on save.
 # ---------------------------------------------------------------------------
 
-title: Adyant Agrawal
-tagline: Postdoctoral Researcher
-author: Adyant Agrawal
-author_short: A. Agrawal            # name highlighted (bold) in author lists
-email: adyant.agrawal@icp.uni-stuttgart.de
 lang: en
-description: >-
-  Postdoctoral researcher at the Institute for Computational Physics,
-  University of Stuttgart. Molecular dynamics of confined electrolytes,
-  interfaces, and soft matter.
-
-# --- Hero / about section -------------------------------------------------
-hero:
-  role: Postdoctoral Researcher
-  name: Adyant Agrawal
-  initials: AA
-  affiliation: Institute for Computational Physics, University of Stuttgart
-  photo: /assets/img/photo.jpg
-  bio: >-
-    I am a postdoctoral researcher at the
-    [Institute for Computational Physics (ICP)](https://www.icp.uni-stuttgart.de/),
-    University of Stuttgart. My current work uses molecular dynamics to study
-    salt crystallisation and disjoining pressure in nanoconfined electrolytes.
-  bio_secondary: >-
-    Before joining Stuttgart in 2023 I did my PhD at Queen Mary University of
-    London with Lorenzo Botto, on the rheology of 2D nanomaterial suspensions
-    and the hydrodynamics of nanosheet exfoliation.
-
-# --- Navigation bar -------------------------------------------------------
-nav:
-  - { label: About,    href: "#about" }
-  - { label: Research, href: "#research" }
-  - { label: CV,       href: "#cv" }
-  - { label: Code,     href: "#scripts" }
-  - { label: Contact,  href: "#contact" }
-
-# --- Hero icon links (icon must match a file in _includes/icons/) ---------
-social:
-  - { name: Download CV,    icon: cv,      url: /assets/files/CV_A_Agrawal.pdf, download: true }
-  - { name: Email,          icon: email,   url: "mailto:adyant.agrawal@icp.uni-stuttgart.de" }
-  - { name: Google Scholar, icon: scholar, url: "https://scholar.google.com/citations?user=" }
-  - { name: ORCID,          icon: orcid,   url: "https://orcid.org/0000-0000-0000-0000" }
-  - { name: GitHub,         icon: github,  url: "https://github.com/adyant-agrawal" }
-
-# --- Code & Tools section -------------------------------------------------
-code_intro: Open-source software I contribute to.
-
-# --- Contact section ------------------------------------------------------
-contact:
-  email:   adyant.agrawal@icp.uni-stuttgart.de
-  office:  ICP, University of Stuttgart, 70569 Stuttgart, Germany
-  scholar: "https://scholar.google.com/"
-  orcid:   "https://orcid.org/0000-0000-0000-0000"
-  github:  "https://github.com/adyant-agrawal"
-
-# --- Build settings -------------------------------------------------------
 markdown: kramdown
+
 exclude:
   - README.md
   - LICENSE
