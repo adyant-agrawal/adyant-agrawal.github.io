@@ -1,0 +1,35 @@
+<section id="cv" class="page">
+  <h2>Curriculum Vitae</h2>
+  <div class="cv-grid">
+    <div class="cv-section">
+      {%- for group in site.data.cv.left %}
+      <h3>{{ group.heading }}</h3>
+      {%- for e in group.entries %}
+      <div class="cv-entry">
+        {%- if e.year %}<div class="year">{{ e.year }}</div>{% endif %}
+        <div class="role">{{ e.role }}</div>
+        {%- if e.institution %}<div class="institution">{{ e.institution }}</div>{% endif %}
+        {%- if e.detail %}<div class="detail">{{ e.detail }}</div>{% endif %}
+      </div>
+      {%- endfor %}
+      {%- endfor %}
+    </div>
+
+    <div class="cv-section">
+      {%- for group in site.data.cv.right %}
+      <h3>{{ group.heading }}</h3>
+      {%- for e in group.entries %}
+      <div class="cv-entry">
+        {%- if e.year %}<div class="year">{{ e.year }}</div>{% endif %}
+        <div class="role">{{ e.role }}</div>
+        {%- if e.institution %}<div class="institution">{{ e.institution }}</div>{% endif %}
+        {%- if e.detail %}<div class="detail">{{ e.detail }}</div>{% endif %}
+      </div>
+      {%- endfor %}
+      {%- endfor %}
+      <div class="cv-download">
+        <a href="{{ '/assets/files/CV_A_Agrawal.pdf' | relative_url }}" class="btn btn-outline" download>Download full CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>

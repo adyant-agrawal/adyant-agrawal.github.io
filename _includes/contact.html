@@ -1,0 +1,26 @@
+<section id="contact" class="page">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    <p style="margin-bottom: 1.75rem;">Email is the fastest way to reach me.</p>
+    <div class="contact-row">
+      <span class="contact-label">Email</span>
+      <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">Office</span>
+      <span class="static">{{ site.contact.office }}</span>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">Scholar</span>
+      <a href="{{ site.contact.scholar }}" target="_blank" rel="noopener">Google Scholar profile</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">ORCID</span>
+      <a href="{{ site.contact.orcid }}" target="_blank" rel="noopener">{{ site.contact.orcid | remove: 'https://orcid.org/' }}</a>
+    </div>
+    <div class="contact-row">
+      <span class="contact-label">GitHub</span>
+      <a href="{{ site.contact.github }}" target="_blank" rel="noopener">{{ site.contact.github | remove: 'https://' }}</a>
+    </div>
+  </div>
+</section>

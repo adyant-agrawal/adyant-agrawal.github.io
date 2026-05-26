@@ -1,0 +1,14 @@
+<nav>
+  <div class="inner">
+    <a href="#about" class="logo">{{ site.hero.initials | default: site.title }}</a>
+    <ul>
+      {%- for item in site.nav %}
+      <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    <button class="theme-toggle" aria-label="Toggle colour theme" onclick="toggleTheme()">
+      {% include icons/moon.svg %}
+      {% include icons/sun.svg %}
+    </button>
+  </div>
+</nav>

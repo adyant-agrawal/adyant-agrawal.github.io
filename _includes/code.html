@@ -1,0 +1,14 @@
+<section id="scripts" class="page">
+  <h2>Code &amp; Tools</h2>
+  <p class="scripts-intro">{{ site.code_intro }}</p>
+  <div class="script-grid">
+    {%- for proj in site.data.projects %}
+    <div class="script-card">
+      <div class="script-icon">{% include icons/{{ proj.icon }}.svg %}</div>
+      <h4>{{ proj.name }}</h4>
+      <p>{{ proj.description }}</p>
+      <a class="script-link" href="{{ proj.url }}" target="_blank" rel="noopener">{{ proj.link_label }} &rarr;</a>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

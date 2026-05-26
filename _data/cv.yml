@@ -1,0 +1,44 @@
+# Curriculum Vitae — two columns.
+# Each column is a list of groups; each group has a heading and entries.
+# Entry fields: year (optional), role, institution (optional), detail (optional).
+
+left:
+  - heading: Positions
+    entries:
+      - year: 2023 – Present
+        role: Postdoctoral Researcher
+        institution: Institute for Computational Physics, University of Stuttgart
+
+  - heading: Education
+    entries:
+      - year: 2018 – 2022
+        role: PhD in Mechanical Engineering
+        institution: Queen Mary University of London
+        detail: "Thesis: Liquid exfoliation and rheology of 2D nanomaterials · advisor: Lorenzo Botto"
+      - year: 2013 – 2017
+        role: B.Tech. in Engineering Physics
+        institution: Indian Institute of Technology Delhi
+        detail: "Thesis: Collective motion of self-propelled rods in quasi-2D geometry · advisor: Sujin Babu"
+
+  - heading: Awards
+    entries:
+      - year: "2025"
+        role: Best Poster Award
+        institution: Condensed Matter and Quantum Materials Conference, Bristol
+
+right:
+  - heading: Methods
+    entries:
+      - role: Simulation
+        institution: "Molecular dynamics, free-energy methods, Monte Carlo and Wang–Landau sampling, stochastic dynamics, finite element, mesoscale hydrodynamics (MPCD)"
+      - role: Modelling and ML
+        institution: Continuum theory of confined fluids, machine-learned implicit solvent models, multiscale coupling
+
+  - heading: Tools
+    entries:
+      - role: MD and analysis
+        institution: GROMACS, LAMMPS, MAICoS, VMD
+      - role: Numerics
+        institution: COMSOL, Python (NumPy, MDAnalysis, PyTorch), MATLAB, C++
+      - role: HPC and dev
+        institution: SLURM, Git/GitHub/GitLab, scientific software engineering

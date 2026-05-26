@@ -1,0 +1,27 @@
+<section id="about" class="page">
+  <div class="hero-text">
+    <h3>{{ site.hero.role }}</h3>
+    <h1>{{ site.hero.name }}</h1>
+    <p class="title">{{ site.hero.affiliation }}</p>
+    <p>{{ site.hero.bio | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+    <p class="subtle">{{ site.hero.bio_secondary }}</p>
+  </div>
+  <aside class="hero-side">
+    <div class="avatar">
+      <span class="fallback">{{ site.hero.initials }}</span>
+      <img src="{{ site.hero.photo | relative_url }}" alt="{{ site.hero.name }}"
+           onerror="this.style.display='none'; this.previousElementSibling.style.zIndex='1';">
+    </div>
+    <div class="icon-links">
+      {%- for link in site.social %}
+      <a href="{% if link.url contains '://' or link.url contains 'mailto' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+         class="icon-btn"
+         {% if link.download %}download{% endif %}
+         {% unless link.url contains 'mailto' %}target="_blank" rel="noopener"{% endunless %}
+         title="{{ link.name }}" aria-label="{{ link.name }}">
+        {%- include icons/{{ link.icon }}.svg -%}
+      </a>
+      {%- endfor %}
+    </div>
+  </aside>
+</section>

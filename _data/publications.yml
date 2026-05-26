@@ -1,0 +1,38 @@
+# Publications — newest first.
+# To add a paper, copy a block and edit. `pages` and `tags` are optional.
+# Your own name (set as author_short in _config.yml) is bolded automatically.
+
+- title: Negative intrinsic viscosity in graphene nanoparticle suspensions induced by hydrodynamic slip
+  authors: A. Agrawal, C. Kamal, S. Gravelle, L. Botto
+  journal: ACS Nano
+  volume: "19"
+  pages: 38350–38359
+  year: 2025
+  doi: 10.1021/acsnano.5c10415
+  tags: [Suspension rheology, Hydrodynamic slip, 2D materials]
+
+- title: Interfacial ion hydration and electrostatics govern salt precipitation and crystal morphology
+  authors: A. Agrawal, S. Gravelle, C. Holm, A. Schlaich
+  journal: The Journal of Chemical Physics
+  volume: "163"
+  year: 2025
+  doi: 10.1063/5.0299741
+  tags: [Crystallisation, Confined electrolytes, Molecular dynamics]
+
+- title: Viscous peeling of a nanosheet
+  authors: A. Agrawal, S. Gravelle, C. Kamal, L. Botto
+  journal: Soft Matter
+  volume: "18"
+  pages: 3967–3980
+  year: 2022
+  doi: 10.1039/D1SM01743H
+  tags: [Continuum hydrodynamics, Graphene exfoliation, FSI]
+
+- title: Self-organization in a bimotility mixture of model microswimmers
+  authors: A. Agrawal, S. B. Babu
+  journal: Physical Review E
+  volume: "97"
+  pages: 020401(R)
+  year: 2018
+  doi: 10.1103/PhysRevE.97.020401
+  tags: [Active matter, Microswimmers, MPCD]
