@@ -1,19 +1,16 @@
 # adyant-agrawal.github.io
 
-Personal academic website of **Adyant Agrawal** — postdoctoral researcher at the
-Institute for Computational Physics, University of Stuttgart.
+Personal academic website of **Adyant Agrawal**, postdoctoral researcher at the Institute for Computational Physics, University of Stuttgart.
 
 Live at **<https://adyant-agrawal.github.io/>**.
 
-Built with [Jekyll](https://jekyllrb.com/) and served by GitHub Pages. The design
-is a lightweight custom theme (no external theme dependency): a single shared
-stylesheet, reusable section partials, and all content kept in plain data files.
+Built with [Jekyll](https://jekyllrb.com/) and served by GitHub Pages. The layout is a set of partials in `_includes/`, styled by `assets/css/style.css`, with content in `_data/`. All content is kept in plain data files.
 
 ## Editing content
 
-Almost everything is data-driven — you rarely need to touch HTML.
+Edit site content in plain text files under `_data/` (in any editor or on GitHub) as follows:
 
-| To change… | Edit |
+| To change | Edit |
 |---|---|
 | Name, bio, affiliation, social links, nav, contact details | `_data/content.yml` |
 | Publication list | `_data/publications.yml` |
@@ -23,12 +20,8 @@ Almost everything is data-driven — you rarely need to touch HTML.
 | Profile photo | replace `assets/img/photo.jpg` |
 | CV PDF | replace `assets/files/resume.pdf` |
 
-Everything you edit lives in `_data/`. `jekyll serve` watches that folder and
-rebuilds on save, so changes show up on refresh. `_config.yml` holds only build
-settings and is read once at startup — the rare times you edit it, restart the
-server.
 
-**Add a publication** — copy a block in `_data/publications.yml`:
+**Add a publication.** Copy a block in `_data/publications.yml`:
 
 ```yaml
 - title: Your paper title
@@ -60,7 +53,7 @@ Your own name (`author_short` in `_data/content.yml`) is bolded automatically in
 │   ├── code.html         # renders _data/projects.yml
 │   ├── contact.html      # contact block
 │   ├── footer.html
-│   └── icons/            # one SVG per icon (cv, email, scholar, orcid, …)
+│   └── icons/            # one SVG per icon
 ├── _data/                # all the content you edit (hot-reloads on save)
 │   ├── content.yml       # name, bio, nav, social links, contact
 │   ├── publications.yml
@@ -75,7 +68,7 @@ Your own name (`author_short` in `_data/content.yml`) is bolded automatically in
 
 ## Local preview (optional)
 
-GitHub Pages rebuilds the site automatically on every push, so a local install is only needed if you want to preview before pushing.
+GitHub Pages rebuilds the site on every push. Use a local install only to preview before pushing.
 
 ```bash
 gem install --user-install jekyll
@@ -84,7 +77,8 @@ jekyll serve
 # open http://localhost:4000
 ```
 
+`jekyll serve` watches `_data/` and rebuilds on save, so edits show on refresh.
+
 ## Licence
 
-Code and template released under the [MIT licence](LICENSE).
-Site content (text, CV, images) © Adyant Agrawal.
+Code and template released under the [MIT licence](LICENSE). Site content (text, CV, images) © Adyant Agrawal.
