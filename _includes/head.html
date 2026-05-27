@@ -4,6 +4,9 @@
   <title>{{ site.data.content.title }} | {{ site.data.content.tagline }}, ICP Stuttgart</title>
   <meta name="description" content="{{ site.data.content.description }}">
   <meta name="author" content="{{ site.data.content.author }}">
+  {%- if site.data.content.google_site_verification %}
+  <meta name="google-site-verification" content="{{ site.data.content.google_site_verification }}">
+  {%- endif %}
 
   <!-- Open Graph -->
   {%- assign c = site.data.content -%}
@@ -31,8 +34,8 @@
     },
     "sameAs": [
       {%- assign _sep = "" -%}
-      {%- for _key in "orcid,github,linkedin,researchgate" | split: "," -%}
-        {%- assign _row = c.contact.rows | where: "key", _key | first -%}
+      {%- for _key in c.contact.rows -%}
+        {%- assign _row = c.links | where: "key", _key | first -%}
         {%- if _row.url and _row.url contains "://" -%}
           {{ _sep }}{{ _row.url | jsonify }}{%- assign _sep = ", " -%}
         {%- endif -%}

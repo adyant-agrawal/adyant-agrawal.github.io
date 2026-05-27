@@ -1,17 +1,19 @@
 <section id="contact" class="page">
   <h2>Contact</h2>
-  {%- assign contact = site.data.content.contact %}
+  {%- assign contact = site.data.content.contact -%}
+  {%- assign all_links = site.data.content.links -%}
   <div class="contact-info">
     <p style="margin-bottom: 1.75rem;">{{ contact.intro }}</p>
-    {%- for row in contact.rows %}
-    <div class="contact-row">
-      <span class="contact-label">{{ row.label }}</span>
-      {%- if row.url %}
-      <a href="{{ row.url }}"{% unless row.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}>{{ row.text }}</a>
-      {%- else %}
-      <span class="static">{{ row.text }}</span>
-      {%- endif %}
-    </div>
+    {%- for key in contact.rows -%}
+      {%- assign row = all_links | where: "key", key | first -%}
+      <div class="contact-row">
+        <span class="contact-label">{{ row.label }}</span>
+        {%- if row.url %}
+        <a href="{{ row.url }}"{% unless row.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}>{{ row.text }}</a>
+        {%- else %}
+        <span class="static">{{ row.text }}</span>
+        {%- endif %}
+      </div>
     {%- endfor %}
   </div>
 </section>

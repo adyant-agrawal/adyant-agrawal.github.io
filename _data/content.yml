@@ -6,6 +6,7 @@
 # ---------------------------------------------------------------------------
 
 site_url: https://adyant-agrawal.github.io
+google_site_verification: google9a2f9c516c0466a9
 
 title: Adyant Agrawal
 tagline: Postdoctoral Researcher
@@ -36,15 +37,47 @@ nav:
   - { label: Code,     href: "#scripts" }
   - { label: Contact,  href: "#contact" }
 
-# --- Hero icon links (icon must match a file in _includes/icons/) ---------
-social:
-  - { name: Download CV,    icon: cv,      url: /assets/files/resume.pdf, download: true }
-  - { name: Email,          icon: email,   url: "mailto:adyant.agrawal@icp.uni-stuttgart.de" }
-  - { name: Google Scholar, icon: scholar, url: "https://scholar.google.com/citations?user=" }
-  - { name: ORCID,          icon: orcid,   url: "https://orcid.org/0000-0002-6931-7431" }
-  - { name: GitHub,         icon: github,   url: "https://github.com/adyant-agrawal" }
-  - { name: LinkedIn,       icon: linkedin,     url: "https://www.linkedin.com/in/adyant-agrawal" }
-  - { name: ResearchGate,   icon: researchgate, url: "https://www.researchgate.net/profile/Adyant-Agrawal" }
+# --- All profile links (single source of truth) ---------------------------
+#     key:      identifier; also used as icon filename in _includes/icons/
+#     label:    display name (icon tooltip + contact section heading)
+#     url:      href (omit for text-only rows like office)
+#     text:     link text shown in contact section (omit for icon-only entries)
+#     download: filename.pdf  sets the browser's save-as filename (CV only)
+links:
+  - key: cv
+    label: Download CV
+    url: /assets/files/resume.pdf
+    download: resume_A_Agrawal.pdf
+  - key: email
+    label: Email
+    url: "mailto:adyant.agrawal@icp.uni-stuttgart.de"
+    text: adyant.agrawal@icp.uni-stuttgart.de
+  - key: office
+    label: Office
+    text: ICP, University of Stuttgart, 70569 Stuttgart, Germany
+  - key: scholar
+    label: Google Scholar
+    url: "https://scholar.google.com/citations?user=X1AdLVsAAAAJ"
+    text: Google Scholar profile
+  - key: orcid
+    label: ORCID
+    url: "https://orcid.org/0000-0002-6931-7431"
+    text: "0000-0002-6931-7431"
+  - key: github
+    label: GitHub
+    url: "https://github.com/adyant-agrawal"
+    text: github.com/adyant-agrawal
+  - key: linkedin
+    label: LinkedIn
+    url: "https://www.linkedin.com/in/adyant-agrawal"
+    text: linkedin.com/in/adyant-agrawal
+  - key: researchgate
+    label: ResearchGate
+    url: "https://www.researchgate.net/profile/Adyant-Agrawal"
+    text: ResearchGate profile
+
+# --- Hero icon bar: keys from `links` to show as icons -------------------
+social: [cv, scholar, orcid, github, researchgate]
 
 # --- Code & Tools section -------------------------------------------------
 code_intro: Open-source software I contribute to.
@@ -52,31 +85,4 @@ code_intro: Open-source software I contribute to.
 # --- Contact section ------------------------------------------------------
 contact:
   intro: Email is the fastest way to reach me.
-  rows:
-    - key: email
-      label: Email
-      url: "mailto:adyant.agrawal@icp.uni-stuttgart.de"
-      text: adyant.agrawal@icp.uni-stuttgart.de
-    - key: office
-      label: Office
-      text: ICP, University of Stuttgart, 70569 Stuttgart, Germany
-    - key: scholar
-      label: Scholar
-      url: "https://scholar.google.com/"
-      text: Google Scholar profile
-    - key: orcid
-      label: ORCID
-      url: "https://orcid.org/0000-0002-6931-7431"
-      text: "0000-0002-6931-7431"
-    - key: github
-      label: GitHub
-      url: "https://github.com/adyant-agrawal"
-      text: github.com/adyant-agrawal
-    - key: linkedin
-      label: LinkedIn
-      url: "https://www.linkedin.com/in/adyant-agrawal"
-      text: linkedin.com/in/adyant-agrawal
-    - key: researchgate
-      label: ResearchGate
-      url: "https://www.researchgate.net/profile/Adyant-Agrawal"
-      text: ResearchGate profile
+  rows: [email, office, linkedin]

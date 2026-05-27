@@ -14,15 +14,17 @@
            onerror="this.style.display='none'; this.previousElementSibling.style.zIndex='1';">
     </div>
     <div class="icon-links">
-      {%- for link in site.data.content.social %}
-      <a href="{% if link.url contains '://' or link.url contains 'mailto' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
-         class="icon-btn"
-         {% if link.download %}download{% endif %}
-         {% unless link.url contains 'mailto' %}target="_blank" rel="noopener"{% endunless %}
-         title="{{ link.name }}" aria-label="{{ link.name }}">
-        {%- include icons/{{ link.icon }}.svg -%}
-      </a>
-      {%- endfor %}
+      {%- assign all_links = site.data.content.links -%}
+      {%- for key in site.data.content.social -%}
+        {%- assign link = all_links | where: "key", key | first -%}
+        <a href="{% if link.url contains '://' or link.url contains 'mailto' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+           class="icon-btn"
+           {% if link.download %}download="{{ link.download }}"{% endif %}
+           {% unless link.url contains 'mailto' %}target="_blank" rel="noopener"{% endunless %}
+           title="{{ link.label }}" aria-label="{{ link.label }}">
+          {%- include icons/{{ link.key }}.svg -%}
+        </a>
+      {%- endfor -%}
     </div>
   </aside>
 </section>
