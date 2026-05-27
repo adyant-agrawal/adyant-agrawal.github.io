@@ -5,15 +5,15 @@
 #  Publications, CV entries, and projects are in the other _data/ files.
 # ---------------------------------------------------------------------------
 
+site_url: https://adyant-agrawal.github.io
+
 title: Adyant Agrawal
 tagline: Postdoctoral Researcher
 author: Adyant Agrawal
 author_short: A. Agrawal            # name highlighted (bold) in author lists
 email: adyant.agrawal@icp.uni-stuttgart.de
 description: >-
-  Postdoctoral researcher at the Institute for Computational Physics,
-  University of Stuttgart. Molecular dynamics of confined electrolytes,
-  interfaces, and soft matter.
+  Computational soft matter and fluid mechanics researcher.
 
 # --- Hero / about section -------------------------------------------------
 hero:
@@ -21,6 +21,7 @@ hero:
   name: Adyant Agrawal
   initials: AA
   affiliation: Institute for Computational Physics, University of Stuttgart
+  affiliation_url: https://www.icp.uni-stuttgart.de/
   photo: /assets/img/photo.jpg
   bio: >-
     I am a postdoctoral researcher at the [Institute for Computational Physics (ICP)](https://www.icp.uni-stuttgart.de/), University of Stuttgart. My research uses atomistic, machine-learned, and multiscale methods to understand confined and interfacial fluid phenomena, including salt crystallisation, electrolyte structure at charged interfaces, and gas solubility in nanoconfinement.
@@ -41,15 +42,41 @@ social:
   - { name: Email,          icon: email,   url: "mailto:adyant.agrawal@icp.uni-stuttgart.de" }
   - { name: Google Scholar, icon: scholar, url: "https://scholar.google.com/citations?user=" }
   - { name: ORCID,          icon: orcid,   url: "https://orcid.org/0000-0002-6931-7431" }
-  - { name: GitHub,         icon: github,  url: "https://github.com/adyant-agrawal" }
+  - { name: GitHub,         icon: github,   url: "https://github.com/adyant-agrawal" }
+  - { name: LinkedIn,       icon: linkedin,     url: "https://www.linkedin.com/in/adyant-agrawal" }
+  - { name: ResearchGate,   icon: researchgate, url: "https://www.researchgate.net/profile/Adyant-Agrawal" }
 
 # --- Code & Tools section -------------------------------------------------
 code_intro: Open-source software I contribute to.
 
 # --- Contact section ------------------------------------------------------
 contact:
-  email:   adyant.agrawal@icp.uni-stuttgart.de
-  office:  ICP, University of Stuttgart, 70569 Stuttgart, Germany
-  scholar: "https://scholar.google.com/"
-  orcid:   "https://orcid.org/0000-0002-6931-7431"
-  github:  "https://github.com/adyant-agrawal"
+  intro: Email is the fastest way to reach me.
+  rows:
+    - key: email
+      label: Email
+      url: "mailto:adyant.agrawal@icp.uni-stuttgart.de"
+      text: adyant.agrawal@icp.uni-stuttgart.de
+    - key: office
+      label: Office
+      text: ICP, University of Stuttgart, 70569 Stuttgart, Germany
+    - key: scholar
+      label: Scholar
+      url: "https://scholar.google.com/"
+      text: Google Scholar profile
+    - key: orcid
+      label: ORCID
+      url: "https://orcid.org/0000-0002-6931-7431"
+      text: "0000-0002-6931-7431"
+    - key: github
+      label: GitHub
+      url: "https://github.com/adyant-agrawal"
+      text: github.com/adyant-agrawal
+    - key: linkedin
+      label: LinkedIn
+      url: "https://www.linkedin.com/in/adyant-agrawal"
+      text: linkedin.com/in/adyant-agrawal
+    - key: researchgate
+      label: ResearchGate
+      url: "https://www.researchgate.net/profile/Adyant-Agrawal"
+      text: ResearchGate profile

@@ -2,26 +2,16 @@
   <h2>Contact</h2>
   {%- assign contact = site.data.content.contact %}
   <div class="contact-info">
-    <p style="margin-bottom: 1.75rem;">Email is the fastest way to reach me.</p>
+    <p style="margin-bottom: 1.75rem;">{{ contact.intro }}</p>
+    {%- for row in contact.rows %}
     <div class="contact-row">
-      <span class="contact-label">Email</span>
-      <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+      <span class="contact-label">{{ row.label }}</span>
+      {%- if row.url %}
+      <a href="{{ row.url }}"{% unless row.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}>{{ row.text }}</a>
+      {%- else %}
+      <span class="static">{{ row.text }}</span>
+      {%- endif %}
     </div>
-    <div class="contact-row">
-      <span class="contact-label">Office</span>
-      <span class="static">{{ contact.office }}</span>
-    </div>
-    <div class="contact-row">
-      <span class="contact-label">Scholar</span>
-      <a href="{{ contact.scholar }}" target="_blank" rel="noopener">Google Scholar profile</a>
-    </div>
-    <div class="contact-row">
-      <span class="contact-label">ORCID</span>
-      <a href="{{ contact.orcid }}" target="_blank" rel="noopener">{{ contact.orcid | remove: 'https://orcid.org/' }}</a>
-    </div>
-    <div class="contact-row">
-      <span class="contact-label">GitHub</span>
-      <a href="{{ contact.github }}" target="_blank" rel="noopener">{{ contact.github | remove: 'https://' }}</a>
-    </div>
+    {%- endfor %}
   </div>
 </section>

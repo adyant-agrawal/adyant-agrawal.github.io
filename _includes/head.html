@@ -5,6 +5,43 @@
   <meta name="description" content="{{ site.data.content.description }}">
   <meta name="author" content="{{ site.data.content.author }}">
 
+  <!-- Open Graph -->
+  {%- assign c = site.data.content -%}
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="{{ site.lang }}">
+  <meta property="og:title"       content="{{ c.title }}">
+  <meta property="og:description" content="{{ c.description }}">
+  <meta property="og:url"         content="{{ c.site_url }}">
+  <meta property="og:image"       content="{{ c.site_url }}{{ c.hero.photo }}">
+  <meta name="twitter:card"       content="summary">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ c.author | jsonify }},
+    "url": {{ c.site_url | jsonify }},
+    "email": {{ c.email | prepend: "mailto:" | jsonify }},
+    "jobTitle": {{ c.tagline | jsonify }},
+    "affiliation": {
+      "@type": "Organization",
+      "name": {{ c.hero.affiliation | jsonify }}{% if c.hero.affiliation_url %},
+      "url": {{ c.hero.affiliation_url | jsonify }}{% endif %}
+    },
+    "sameAs": [
+      {%- assign _sep = "" -%}
+      {%- for _key in "orcid,github,linkedin,researchgate" | split: "," -%}
+        {%- assign _row = c.contact.rows | where: "key", _key | first -%}
+        {%- if _row.url and _row.url contains "://" -%}
+          {{ _sep }}{{ _row.url | jsonify }}{%- assign _sep = ", " -%}
+        {%- endif -%}
+      {%- endfor %}
+    ],
+    "image": {{ c.hero.photo | prepend: c.site_url | jsonify }}
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">

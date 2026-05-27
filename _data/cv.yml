@@ -30,7 +30,7 @@ right:
   - heading: Methods
     entries:
       - role: Simulation
-        institution: "Molecular dynamics, free-energy methods, Monte Carlo and Wang–Landau sampling, stochastic dynamics, finite element, mesoscale hydrodynamics (MPCD)"
+        institution: "Molecular dynamics, free-energy methods, Monte Carlo and Wang-Landau sampling, stochastic dynamics, finite element, mesoscale hydrodynamics (MPCD)"
       - role: Modelling and ML
         institution: Continuum theory of confined fluids, machine-learned implicit solvent models, multiscale coupling
 
