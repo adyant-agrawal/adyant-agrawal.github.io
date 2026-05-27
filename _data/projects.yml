@@ -4,5 +4,5 @@
 - name: MAICoS
   icon: file
   description: "Open-source Python toolkit for the molecular analysis of interfacial and confined systems: density profiles, dielectric response, structural correlations. Contributor."
-  url: https://gitlab.com/maicos-devel/maicos
-  link_label: View on GitLab
+  url: https://github.com/maicos-devel/maicos
+  link_label: View on GitHub
