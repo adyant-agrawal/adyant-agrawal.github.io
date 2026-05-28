@@ -21,13 +21,14 @@ hero:
   role: Postdoctoral Researcher
   name: Adyant Agrawal
   initials: AA
-  affiliation: Institute for Computational Physics, University of Stuttgart
+  affiliation: University of Stuttgart
   affiliation_url: https://www.icp.uni-stuttgart.de/
   photo: /assets/img/photo.jpg
   bio: >-
-    I am a postdoctoral researcher at the [Institute for Computational Physics (ICP)](https://www.icp.uni-stuttgart.de/), University of Stuttgart. My research uses atomistic, machine-learned, and multiscale methods to understand confined and interfacial fluid phenomena, including salt crystallisation, electrolyte structure at charged interfaces, and gas solubility in nanoconfinement.
+    How do nanoscale interfacial phenomena govern the emergent behaviour of complex and confined fluids? My reseach vision is to develop predictive frameworks for such applied problems, grounded in molecular mechanisms and thermodynamics.
+    Currently, at the [Institute for Computational Physics (ICP)](https://www.icp.uni-stuttgart.de/), I use atomistic simulations, machine-learned models, and continuum approaches to investigate salt precipitation in porous media and gas solubility under nanoscale confinement.
   bio_secondary: >-
-    Before joining Stuttgart in 2023, I completed my PhD at Queen Mary University of London with Lorenzo Botto, working on the rheology of 2D nanomaterial suspensions and the hydrodynamics of nanosheet exfoliation.
+    Before joining Stuttgart, I completed my PhD at Queen Mary University of London with Lorenzo Botto, working on the rheology of 2D nanomaterial suspensions and the hydrodynamics of nanosheet exfoliation.
 
 # --- Navigation bar -------------------------------------------------------
 nav:
@@ -77,7 +78,7 @@ links:
     text: ResearchGate profile
 
 # --- Hero icon bar: keys from `links` to show as icons -------------------
-social: [cv, scholar, orcid, github, researchgate]
+social: [scholar, orcid, github, researchgate]
 
 # --- Code & Tools section -------------------------------------------------
 code_intro: Open-source software I contribute to.

@@ -30,7 +30,7 @@ right:
   - heading: Methods
     entries:
       - role: Simulation
-        institution: "Molecular dynamics, free-energy methods, Monte Carlo and Wang-Landau sampling, stochastic dynamics, finite element, mesoscale hydrodynamics (MPCD)"
+        institution: "Molecular dynamics, free-energy methods, stochastic dynamics, finite element, mesoscale hydrodynamics"
       - role: Modelling and ML
         institution: Continuum theory of confined fluids, machine-learned implicit solvent models, multiscale coupling
 
@@ -39,6 +39,6 @@ right:
       - role: MD and analysis
         institution: GROMACS, LAMMPS, MAICoS, VMD
       - role: Numerics
-        institution: COMSOL, Python (NumPy, MDAnalysis, PyTorch), MATLAB, C++
+        institution: Python (NumPy, MDAnalysis), COMSOL, MATLAB, C++
       - role: HPC and dev
         institution: SLURM, Git/GitHub/GitLab, scientific software engineering
